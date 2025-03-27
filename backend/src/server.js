@@ -5,11 +5,13 @@ const cors = require('cors');
 require('dotenv').config();
 
 const journalRoutes = require('./routes/journalRoutes');
+const supportRoute = require('./routes/supportRoutes');
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use('/api/journals', journalRoutes);
+app.use('/api/support-request', supportRoute);
 
 // Routes placeholder
 app.get('/', (req, res) => {
