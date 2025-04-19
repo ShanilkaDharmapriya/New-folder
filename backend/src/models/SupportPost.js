@@ -11,6 +11,8 @@ const supportPostSchema = new mongoose.Schema({
   message: String,
   createdAt: { type: Date, default: Date.now },
   comments: [commentSchema],
+}, {
+  timestamps: true
 });
 
 module.exports = mongoose.model('SupportPost', supportPostSchema);

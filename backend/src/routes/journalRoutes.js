@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const JournalEntry = require('../models/journal');
+const JournalEntry = require('../models/Journal');
 
 // Create new journal or gratitude entry
 router.post('/', async (req, res) => {

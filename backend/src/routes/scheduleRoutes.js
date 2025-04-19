@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Schedule = require('../models/schedule');
+const Schedule = require('../models/Schedule');
 
 // Get schedule for a specific date
 router.get('/:date', async (req, res) => {
