@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/dailyschedule.css';
 import dayjs from 'dayjs';
+import Layout from '../components/Layout';
+import '../styles/dashboard.css';
 
 const dailyRoutines = {
   morning: [
@@ -52,6 +54,7 @@ const DailySchedule = () => {
   const completedCount = completed[selectedDate]?.length || 0;
 
   return (
+    <Layout>
     <div className="schedule-page">
       <div className="schedule-box">
         <h2 className="schedule-heading">📆 Daily Routine Checklist</h2>
@@ -103,6 +106,7 @@ const DailySchedule = () => {
         ))}
       </div>
     </div>
+    </Layout>
   );
 };
 

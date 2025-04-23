@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Page background – soft gray-white-green gradient */
+.dashboard-page {
+  @apply flex-1 p-8 overflow-y-auto;
+  background-image: linear-gradient(135deg, #f8fafc, #f0fdf4); /* gray to soft green */
+}
+
+/* Center content */
+.dashboard-content {
+  @apply w-full max-w-6xl mx-auto;
+}
+
+.dashboard-header {
+  @apply flex justify-between items-center mb-8;
+}
+
+.welcome-text {
+  @apply text-4xl font-bold text-green-800 tracking-wide;
+}
+
+.profile-btn {
+  @apply bg-white/40 backdrop-blur-lg px-5 py-2 rounded-full shadow-md text-sm text-gray-700 hover:bg-white/60 transition;
+}
+
+/* Brain Card – soft glass effect with calm tones */
+.dashboard-brain-card {
+  @apply p-10 rounded-3xl shadow-xl flex flex-col items-center justify-center mb-10 border border-white/30;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.6), rgba(240, 253, 244, 0.4)); /* white-green calm */
+  backdrop-filter: blur(16px);
+  min-height: 600px; /* Fills more of the page */
+}
+
+/* Bigger brain image */
+.brain-img {
+  @apply w-64 h-64 mb-8 object-contain rounded-full;
+}
+
+/* Tip Text Section */
+.tip-text {
+  @apply text-center mt-4 space-y-2;
+}
+
+.tip-heading {
+  @apply text-3xl font-bold text-green-900 mb-2;
+}
+
+.tip-sub {
+  @apply text-green-800 text-xl font-medium;
+}
+
+.quote {
+  @apply italic text-gray-600 text-lg mt-4;
+}
+
+/* Buttons container */
+.dashboard-actions {
+  @apply grid grid-cols-2 sm:grid-cols-4 gap-6;
+}
+
+/* Common action button base – taller & glassy */
+.action-btn {
+  @apply w-full h-28 flex items-center justify-center text-center px-6 py-6 rounded-3xl font-semibold text-base shadow-xl transition-all duration-300 text-white;
+  background-image: linear-gradient(to right, #ffffff20, #ffffff10);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Button color variants */
+.action-btn.journal {
+  @apply bg-gradient-to-br from-green-300 via-green-400 to-green-500 hover:from-green-400 hover:to-green-600;
+}
+
+.action-btn.uplift {
+  @apply bg-gradient-to-br from-blue-300 via-blue-400 to-blue-500 hover:from-blue-400 hover:to-blue-600;
+}
+
+.action-btn.support {
+  @apply bg-gradient-to-br from-purple-300 via-purple-400 to-purple-500 hover:from-purple-400 hover:to-purple-600;
+}
+
+.action-btn.routine {
+  @apply bg-gradient-to-br from-teal-300 via-teal-400 to-teal-500 hover:from-teal-400 hover:to-teal-600;
+}
+
+/* Layout background */
+.dashboard-layout {
+  @apply flex w-full h-screen overflow-hidden;
+  background-image: linear-gradient(to bottom right, #f1f5f9, #f0fdf4); /* soft gray to soft green */
+}
+
+/* Sidebar – calm glass effect with gray tint */
+.sidebar {
+  @apply w-72 text-gray-900 shadow-lg border-r border-white/10 rounded-r-3xl flex flex-col justify-between p-6;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-title {
+  @apply text-3xl font-semibold mb-10 tracking-wide text-gray-800;
+}
+
+.sidebar-nav {
+  @apply flex flex-col space-y-4;
+}
+
+.nav-item {
+  @apply text-left text-sm font-medium text-gray-800 hover:bg-white/30 hover:text-green-800 px-4 py-3 rounded-xl transition-all duration-200;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.nav-item.active {
+  @apply bg-green-100 text-green-900 ring-2 ring-green-400/50;
+}
+
+/* Logout Button – glassy and modern */
+.logout-btn {
+  @apply mt-auto flex items-center justify-center bg-red-200/30 text-red-800 font-semibold px-5 py-4 rounded-2xl text-sm hover:bg-red-300/50 transition-all duration-300;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.08);
+}

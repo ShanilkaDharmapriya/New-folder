@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const SupportPost = require('../models/Feed')
+const SupportPost = require('../models/SupportPost')
 
 // Create a new post
 router.post('/', async (req, res) => {

@@ -69,3 +69,85 @@
 .entry-type-label {
   @apply text-xs mt-3 bg-green-100 text-green-700 px-3 py-1 rounded-full self-start capitalize;
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Main layout */
+.page-container {
+  @apply min-h-screen p-6 bg-gradient-to-br from-gray-50 via-green-50 to-white;
+}
+
+/* Entry Form Section */
+.entry-section {
+  @apply bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-gray-200 max-w-3xl mx-auto mb-12;
+}
+
+/* Heading */
+.entry-heading {
+  @apply text-4xl font-bold text-center text-green-700 tracking-wide mb-8;
+}
+
+/* Toggle Buttons Container */
+.entry-toggle {
+  @apply flex justify-center gap-4 mb-6;
+}
+
+/* Toggle Buttons */
+.entry-toggle-button {
+  @apply px-6 py-2 rounded-full text-sm font-medium transition-all bg-white/60 text-gray-700 border border-white/30 shadow backdrop-blur-md hover:bg-white/80;
+}
+
+.entry-toggle-button.active {
+  @apply bg-green-600 text-white shadow-lg;
+}
+
+/* Textarea Form */
+.entry-form textarea {
+  @apply  bg-gray-300/50 p-5 border border-white/30 rounded-2xl text-gray-900 placeholder-gray-500 backdrop-blur-lg focus:outline-none focus:ring-2 focus:ring-green-300 resize-none transition;
+}
+
+/* Submit Button */
+.entry-submit-button {
+  @apply mt-6 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition-all block mx-auto;
+}
+
+/* Entry Display Section */
+.entry-past-section {
+  @apply max-w-6xl mx-auto;
+}
+
+/* Subheading */
+.entry-subheading {
+  @apply text-2xl font-semibold text-gray-700 mb-6 text-center;
+}
+
+/* Empty Message */
+.entry-empty {
+  @apply text-center text-gray-400 italic;
+}
+
+/* Card Scroll Container */
+.entry-cards-container {
+  @apply flex overflow-x-auto space-x-6 pb-4 px-2;
+}
+
+/* Entry Cards */
+.entry-card {
+  @apply min-w-[260px] max-w-[260px] h-[260px] bg-white border border-gray-200 rounded-3xl shadow-xl p-5 flex flex-col justify-between transition hover:scale-105 hover:shadow-2xl;
+}
+
+/* Date Text */
+.entry-date {
+  @apply text-xs text-gray-500 mb-1;
+}
+
+/* Entry Text */
+.entry-text {
+  @apply text-gray-800 text-sm leading-relaxed whitespace-pre-wrap overflow-hidden;
+}
+
+/* Type Label */
+.entry-type-label {
+  @apply text-xs mt-4 bg-green-100 text-green-800 px-3 py-1 rounded-full self-start capitalize shadow-sm;
+}

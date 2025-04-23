@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/feed.css';
+import Layout from '../components/Layout';
+import '../styles/dashboard.css';
 
 const SupportWall = () => {
   const [posts, setPosts] = useState([]);
@@ -43,6 +45,7 @@ const SupportWall = () => {
   }, []);
 
   return (
+    <Layout>
     <div className="wall-page">
       <div className="wall-form">
         <h2 className="wall-heading">🌍 Share Your Feelings or Ask for Support</h2>
@@ -91,6 +94,7 @@ const SupportWall = () => {
         ))}
       </div>
     </div>
+    </Layout>
   );
 };
 
