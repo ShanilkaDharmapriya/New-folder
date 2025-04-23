@@ -1,58 +1,60 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Layout from '../components/Layout';
 import '../styles/dashboard.css';
+import brain1 from '../assets/brain1.svg.png';
+import brain2 from '../assets/brain2.svg.png';
 
 const UserDashboard = () => {
   const navigate = useNavigate();
-  const userName = 'Friend'; // Later replace with actual user name from context
-  const completedToday = 5;
-  const totalTasks = 15;
-  const communityPostsToday = 3;
-  const tipOfTheDay = "Drink a glass of water every 2 hours 💧";
-  const quote = "You are doing enough. Be proud of yourself.";
+  const brainImages = [brain1, brain2];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    navigate('/login');
-  };
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % brainImages.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
-    <div className="dashboard-page">
-      <div className="dashboard-box">
-        <h2 className="dashboard-heading">👋 Welcome back, {userName}!</h2>
-        <p className="dashboard-subtext">Today is {new Date().toLocaleDateString()}</p>
-
-        {/* Daily Progress Widget */}
-        <div className="dashboard-widget">
-          <h3 className="widget-title">📊 Today's Routine Progress</h3>
-          <p>{completedToday} / {totalTasks} routines completed 💪</p>
-          <button onClick={() => navigate('/schedule')}>Go to My Daily Schedule</button>
+    <Layout>
+      <div className="dashboard-content">
+        <div className="dashboard-header">
+          <h1 className="welcome-text">Welcome back, Friend!</h1>
+          <button className="profile-btn">👤 View Profile</button>
         </div>
 
-        {/* Daily Tip & Quote */}
-        <div className="dashboard-widget">
-          <h3 className="widget-title">💡 Tip of the Day</h3>
-          <p className="widget-content">{tipOfTheDay}</p>
-          <blockquote className="dashboard-quote">“{quote}”</blockquote>
+        <div className="dashboard-brain-card">
+          <img
+            src={brainImages[currentImageIndex]}
+            alt="Brain"
+            className="brain-img rounded-full transition-all duration-500 ease-in-out"
+          />
+          <div className="tip-text">
+            <h2 className="tip-heading">Tip of the Day</h2>
+            <p className="tip-sub">Drink a glass of water every 2 hours 💧</p>
+            <p className="quote">“You are doing enough. Be proud of yourself.”</p>
+          </div>
         </div>
 
-        {/* Community Activity */}
-        <div className="dashboard-widget">
-          <h3 className="widget-title">🫶 Community Activity</h3>
-          <p>{communityPostsToday} new posts in the Support Wall today</p>
-          <button onClick={() => navigate('/support')}>Join the Conversation</button>
-        </div>
-
-        {/* Quick Links */}
-        <div className="dashboard-links">
-          <button onClick={() => navigate('/journal')}>📖 Journal Now</button>
-          <button onClick={() => navigate('/uplift')}>🌟 Get Uplifted</button>
-          <button onClick={() => navigate('/support')}>💬 Post to Support Wall</button>
-          <button onClick={() => navigate('/schedule')}>🧘‍♀️ My Routines</button>
-          <button onClick={handleLogout} className="logout-btn">🚪 Logout</button>
+        <div className="dashboard-actions">
+          <button className="action-btn journal" onClick={() => navigate('/Feed')}>
+            📖 Journal Now
+          </button>
+          <button className="action-btn uplift" onClick={() => navigate('/Uplift')}>
+            🌟 Get Uplifted
+          </button>
+          <button className="action-btn support" onClick={() => navigate('/Feed')}>
+            💬 Support Wall
+          </button>
+          <button className="action-btn routine" onClick={() => navigate('/DailySchedule')}>
+            🧘 My Routines
+          </button>
         </div>
       </div>
-    </div>
+    </Layout>
   );
 };
 

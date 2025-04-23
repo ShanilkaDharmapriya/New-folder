@@ -24,17 +24,7 @@ function App() {
   return (
     <Router>
       <div className="app-layout">
-        <nav className="nav-links">
-          <Link to="/login">🔐 Login</Link>
-          <Link to="/register">📝 Register</Link>
-          <Link to="/dashboard">🏠 Dashboard</Link>
-          <Link to="/journal">📖 Journal</Link>
-          <Link to="/uplift">🌟 Uplift Me</Link>
-          <Link to="/Feed">💬 Support Wall</Link>
-          <Link to="/DailySchedule">🗓️ Daily Schedule</Link>
-          <Link to="/admin">🛠️ Admin</Link>
-        </nav>
-
+        
         <Routes>
           {/* Public Routes */}
           <Route path="/login" element={<Login />} />

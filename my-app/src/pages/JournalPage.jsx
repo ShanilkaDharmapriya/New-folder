@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/journal.css';
+import Layout from '../components/Layout';
+import '../styles/dashboard.css';
 
 const JournalPage = () => {
   const [type, setType] = useState('journal');
@@ -38,6 +40,7 @@ const JournalPage = () => {
   }, []);
 
   return (
+    <Layout>
     <div className="page-container">
       <div className="entry-section">
         <h2 className="entry-heading">
@@ -98,6 +101,7 @@ const JournalPage = () => {
         )}
       </div>
     </div>
+    </Layout>
   );
 };
 

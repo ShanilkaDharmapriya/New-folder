@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../styles/upLift.css';
+import Layout from '../components/Layout';
 
 const quotes = [
   "You are stronger than you think.",
@@ -36,6 +37,7 @@ const UpliftMe = () => {
   };
 
   return (
+    <Layout>
     <div className="uplift-page">
       <div className="uplift-section">
         <h2 className="uplift-heading">🌟 Uplift Me</h2>
@@ -56,6 +58,7 @@ const UpliftMe = () => {
         )}
       </div>
     </div>
+    </Layout>
   );
 };
 
