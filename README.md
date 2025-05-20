@@ -6,13 +6,13 @@
 
 ## ✨ Features
 
-- ✍️ Daily Gratitude Journal  
-- 💬 Anonymous Support Wall  
-- 🌱 Routine & Habit Tracker  
-- 📊 Mood Logging  
-- 💡 “Uplift Me” Instant Support  
-- 🔐 JWT Auth with Role-based Dashboards  
-- 📱 Fully Responsive UI with calming theme
+-  Daily Gratitude Journal  
+-  Anonymous Support Wall  
+-  Routine & Habit Tracker  
+-  Mood Logging  
+-  “Uplift Me” Instant Support  
+-  JWT Auth with Role-based Dashboards  
+-  Fully Responsive UI with calming theme
 
 ---
 
@@ -44,7 +44,6 @@
 - Real-time content posting to support wall
 
 
-  Architecture Diagram
 
 ![output (3)](https://github.com/user-attachments/assets/a6ee220a-6564-44f8-8931-74f08680d3bf)
 
@@ -77,5 +76,17 @@
 ```bash
 # 1. Clone the project
 git clone https://github.com/yourusername/mindease.git
+
+
+![Screenshot 2025-05-20 180945](https://github.com/user-attachments/assets/f54e40f0-f505-4ddb-a72c-338ce6b40ec8)
+
+![Screenshot 2025-05-20 181549](https://github.com/user-attachments/assets/a5943a5c-362a-429a-b6e4-b4728c0ae08a)
+
+![Screenshot 2025-05-20 181713](https://github.com/user-attachments/assets/e95d052f-f7e8-46f1-b187-3f60dfc5c8d1)
+
+![Screenshot 2025-05-20 182047](https://github.com/user-attachments/assets/7d4f2ffc-6186-4ef4-a1c2-0bf835b0b158)
+
+![Screenshot 2025-05-20 181850](https://github.com/user-attachments/assets/893d3452-61a4-44b9-93a9-a0a4bc40a6c1)
+
 
 
