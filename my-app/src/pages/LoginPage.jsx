@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import '../styles/auth.css';
 
 const Login = () => {
@@ -47,6 +47,13 @@ const Login = () => {
           required
         />
         <button type="submit">Login</button>
+        
+        <p className="text-center text-gray-600 mt-4">
+          Don't have an account?{' '}
+          <Link to="/register" className="text-sky-500 hover:text-sky-600">
+            Register here
+          </Link>
+        </p>
       </form>
     </div>
   );
