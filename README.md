@@ -77,6 +77,8 @@
 # 1. Clone the project
 git clone https://github.com/yourusername/mindease.git
 
+```
+---
 
 ![Screenshot 2025-05-20 180945](https://github.com/user-attachments/assets/f54e40f0-f505-4ddb-a72c-338ce6b40ec8)
 
